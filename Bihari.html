@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Bihari Food - Authentic Bihari Cuisine Delivered to Your Doorstep
+    </title>
+    <style>
+      :root {
+        --primary-color: #ff6b00;
+        --secondary-color: #ffa500;
+        --dark-bg: #121212;
+        --darker-bg: #0a0a0a;
+        --text-color: #f5f5f5;
+        --text-muted: #aaaaaa;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--dark-bg);
+        color: var(--text-color);
+      }
+
+      header {
+        background-color: var(--darker-bg);
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        margin: 0;
+      }
+
+      .tagline {
+        color: var(--text-muted);
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
+
+      nav {
+        background-color: var(--darker-bg);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        margin: 0 0.5rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        background-color: var(--primary-color);
+        color: var(--darker-bg);
+      }
+
+      .marquee {
+        background-color: var(--primary-color);
+        color: var(--darker-bg);
+        padding: 0.5rem;
+        font-weight: bold;
+        margin: 1rem 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .section-title {
+        color: var(--secondary-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      .menu-category {
+        margin-bottom: 2rem;
+      }
+
+      .food-item {
+        background-color: var(--darker-bg);
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .food-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .food-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-right: 1.5rem;
+      }
+
+      .food-details {
+        flex-grow: 1;
+      }
+
+      .food-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0 0 0.5rem 0;
+        color: var(--primary-color);
+      }
+
+      .food-desc {
+        color: var(--text-muted);
+        margin: 0 0 0.5rem 0;
+        font-size: 0.9rem;
+      }
+
+      .food-price {
+        font-weight: bold;
+        color: var(--secondary-color);
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        background-color: var(--primary-color);
+        color: var(--darker-bg);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary-color);
+      }
+
+      .contact-section {
+        background-color: var(--darker-bg);
+        padding: 2rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+      }
+
+      .payment-methods {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .payment-method {
+        background-color: var(--dark-bg);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .payment-icon {
+        width: 30px;
+        margin-right: 0.5rem;
+      }
+
+      footer {
+        background-color: var(--darker-bg);
+        text-align: center;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .food-item {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .food-img {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">BIHARI FOOD</h1>
+      <p class="tagline">Authentic Bihari Flavors at Your Doorstep</p>
+    </header>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#breakfast">Breakfast</a>
+      <a href="#lunch">Lunch</a>
+      <a href="#dinner">Dinner</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#contact">Contact & Booking</a>
+    </nav>
+
+    <div class="marquee">
+      <marquee behavior="scroll" direction="left">
+        <b>Special Offer:</b> Get 15% off on your first order! Use code
+        <b>BIHARI15</b> • Free delivery on orders above ₹200 • Now accepting
+        online payments via UPI, Credit/Debit Cards, Net Banking
+      </marquee>
+    </div>
+
+    <div class="container">
+      <section id="home">
+        <h2 class="section-title">Welcome to Bihari Food</h2>
+        <p>
+          Experience the authentic flavors of Bihar with our carefully curated
+          menu. From traditional breakfast items to hearty dinners, we bring the
+          taste of Bihar to your home.
+        </p>
+
+        <div style="text-align: center; margin: 2rem 0">
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Bihari Thali"
+            style="
+              max-width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            "
+          />
+        </div>
+      </section>
+
+      <section id="breakfast" class="menu-category">
+        <h2 class="section-title">Breakfast Specials</h2>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Litti Chokha"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Litti Chokha</h3>
+            <p class="food-desc">
+              Traditional Bihari dish - wheat balls stuffed with sattu, served
+              with roasted eggplant and potato mash
+            </p>
+            <p class="food-price">₹120</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Chana Ghugni"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Chana Ghugni</h3>
+            <p class="food-desc">
+              Spicy chickpea curry served with puffed rice or poori
+            </p>
+            <p class="food-price">₹80</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Sattu Sharbat"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Sattu Sharbat</h3>
+            <p class="food-desc">
+              Refreshing drink made from roasted gram flour, lemon, and spices
+            </p>
+            <p class="food-price">₹50</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </section>
+
+      <section id="lunch" class="menu-category">
+        <h2 class="section-title">Lunch Specials</h2>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Dal Pittha"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Dal Pittha</h3>
+            <p class="food-desc">
+              Steamed rice flour dumplings stuffed with spiced lentil paste,
+              served with ghee
+            </p>
+            <p class="food-price">₹150</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Bihari Thali"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Bihari Thali</h3>
+            <p class="food-desc">
+              Complete meal with rice, dal, 2 vegetables, pickle, papad, and
+              dessert
+            </p>
+            <p class="food-price">₹200</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Kadhi Bari"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Kadhi Bari</h3>
+            <p class="food-desc">
+              Gram flour dumplings in spiced yogurt gravy, served with rice
+            </p>
+            <p class="food-price">₹180</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </section>
+
+      <section id="dinner" class="menu-category">
+        <h2 class="section-title">Dinner Specials</h2>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Chana-Sattu Paratha"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Chana-Sattu Paratha</h3>
+            <p class="food-desc">
+              Multi-layered flatbread stuffed with spiced chickpea and sattu
+              mixture
+            </p>
+            <p class="food-price">₹130</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Makhana Kheer"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Makhana Kheer</h3>
+            <p class="food-desc">
+              Creamy dessert made with fox nuts, milk, and dry fruits
+            </p>
+            <p class="food-price">₹90</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Baigan Bharta"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Baigan Bharta</h3>
+            <p class="food-desc">
+              Smoked eggplant mash cooked with onions, tomatoes, and spices
+            </p>
+            <p class="food-price">₹110</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </section>
+
+      <section id="drinks" class="menu-category">
+        <h2 class="section-title">Drinks & Beverages</h2>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Sattu Sharbat"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Sattu Sharbat</h3>
+            <p class="food-desc">
+              Traditional Bihari summer cooler made with roasted gram flour
+            </p>
+            <p class="food-price">₹50</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Thandai"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Thandai</h3>
+            <p class="food-desc">
+              Refreshing milk-based drink with nuts and spices
+            </p>
+            <p class="food-price">₹70</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="Lassi"
+            class="food-img"
+          />
+          <div class="food-details">
+            <h3 class="food-name">Lassi</h3>
+            <p class="food-desc">
+              Sweet or salty yogurt drink, perfect with spicy food
+            </p>
+            <p class="food-price">₹60</p>
+          </div>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact & Online Booking</h2>
+        <p>
+          Place your order online or call us for home delivery of authentic
+          Bihari cuisine.
+        </p>
+
+        <div style="margin-top: 1.5rem">
+          <h3>Contact Information</h3>
+          <p><b>Phone:</b> +91 9876543210</p>
+          <p><b>Email:</b> order@biharifood.com</p>
+          <p><b>Address:</b> 123 Bihari Lane, Patna, Bihar - 800001</p>
+          <p><b>Opening Hours:</b> 8:00 AM - 10:30 PM (Daily)</p>
+        </div>
+
+        <div style="margin-top: 1.5rem">
+          <h3>Online Payment Methods</h3>
+          <div class="payment-methods">
+            <div class="payment-method">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/UPI-Logo-vector.svg/1200px-UPI-Logo-vector.svg.png"
+                alt="UPI"
+                class="payment-icon"
+              />
+              UPI
+            </div>
+            <div class="payment-method">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                alt="Visa"
+                class="payment-icon"
+              />
+              Visa
+            </div>
+            <div class="payment-method">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                alt="Mastercard"
+                class="payment-icon"
+              />
+              Mastercard
+            </div>
+            <div class="payment-method">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Paytm_Logo_%28standalone%29.svg/1200px-Paytm_Logo_%28standalone%29.svg.png"
+                alt="Paytm"
+                class="payment-icon"
+              />
+              Paytm
+            </div>
+            <div class="payment-method">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Google_Pay_%28GPay%29_Logo.svg/768px-Google_Pay_%28GPay%29_Logo.svg.png"
+                alt="Google Pay"
+                class="payment-icon"
+              />
+              Google Pay
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem">
+          <h3>Place Your Order</h3>
+          <form>
+            <div style="margin-bottom: 1rem">
+              <label for="name">Your Name:</label><br />
+              <input
+                type="text"
+                id="name"
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 5px;
+                  border: none;
+                  background-color: var(--dark-bg);
+                  color: var(--text-color);
+                "
+              />
+            </div>
+            <div style="margin-bottom: 1rem">
+              <label for="phone">Phone Number:</label><br />
+              <input
+                type="tel"
+                id="phone"
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 5px;
+                  border: none;
+                  background-color: var(--dark-bg);
+                  color: var(--text-color);
+                "
+              />
+            </div>
+            <div style="margin-bottom: 1rem">
+              <label for="address">Delivery Address:</label><br />
+              <textarea
+                id="address"
+                rows="3"
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 5px;
+                  border: none;
+                  background-color: var(--dark-bg);
+                  color: var(--text-color);
+                "
+              ></textarea>
+            </div>
+            <div style="margin-bottom: 1rem">
+              <label for="order">Your Order:</label><br />
+              <textarea
+                id="order"
+                rows="5"
+                style="
+                  width: 100%;
+                  padding: 0.5rem;
+                  border-radius: 5px;
+                  border: none;
+                  background-color: var(--dark-bg);
+                  color: var(--text-color);
+                "
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn"
+              style="width: 100%; padding: 1rem; font-size: 1.1rem"
+            >
+              Place Order Now
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Bihari Food. All Rights Reserved.</p>
+      <p>Authentic Bihari Cuisine - Delivered Fresh to Your Home</p>
+      <div style="margin-top: 1rem">
+        <a href="#" style="color: var(--primary-color); margin: 0 0.5rem"
+          >Privacy Policy</a
+        >
+        <a href="#" style="color: var(--primary-color); margin: 0 0.5rem"
+          >Terms of Service</a
+        >
+        <a href="#" style="color: var(--primary-color); margin: 0 0.5rem"
+          >Refund Policy</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
